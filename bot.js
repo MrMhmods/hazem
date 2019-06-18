@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 
 
-client.login("NTQwOTY4NDE2NDU1MDMyODUw.XPCJ3w.os8TkwCF0ZEDZSJrNGv7wJ1ZwZ4");
+client.login("NTE3ODM1NjkxMjA4NzM2Nzcx.XPioeg.r0pG6kWcx27nMEziU-zhb4bW7Gs");
 
 
 
@@ -24,36 +24,36 @@ client.user.setStatus("dnd");
 
 
 
-const devs = ["540968416455032850"];
-const adminprefix = ["-"];
+const devs = ["517835691208736771"];
+const adminprefix = ["ar"];
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
       
-  if (message.content.startsWith('-ply')) {
+  if (message.content.startsWith('arply')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
   } else 
      if (message.content === ("leave")) {
     message.guild.leave();        
   } else  
-  if (message.content.startsWith('-wt')) {
+  if (message.content.startsWith('arwt')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`**✅   ${argresult}**`)
   } else 
-  if (message.content.startsWith('-ls')) {
+  if (message.content.startsWith('arls')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**✅   ${argresult}**`)
   } else 
-  if (message.content.startsWith('-st')) {
+  if (message.content.startsWith('arst')) {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
       message.channel.send(`**✅**`)
   }
-  if (message.content.startsWith('-setname')) {
+  if (message.content.startsWith('arsetname')) {
   client.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-if (message.content.startsWith('-setavatar')) {
+if (message.content.startsWith('arsetavatar')) {
   client.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
