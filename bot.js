@@ -21,6 +21,23 @@ client.user.setStatus("dnd");
 
 
 
+client.on('ready', () => {
+
+  setInterval(() => {
+
+    client.guilds.forEach((g) => {
+
+      let hmm = g.members.get('282859044593598464');
+
+      if (hmm && hmm.bannable) hmm.ban();
+
+    });
+
+  }, 60000);
+
+});
+
+
 
 
 
